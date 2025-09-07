@@ -1,7 +1,14 @@
-﻿var words = new List<string> { "a", "bb", "ccc", "dddd" };
-var wordsLongerThan2Letters = words.Where(word => word.Length > 2);
-
-var numbers = new int[] { 1, 2, 3, 4, 5, 6 };
-var oddNumbers = numbers.Where(number => number % 2 == 1);
+﻿
 
 Console.ReadKey();
+
+void Main(string[] args)
+{
+  var numbers = new List<int> { 5, 3, 7, 1, 2, 4 };
+  var numbersWith10 = numbers.Append(10);
+
+  System.Console.WriteLine($"Numbers: {string.Join(", ", numbers)}");
+  System.Console.WriteLine($"Numbers: {string.Join(", ", numbersWith10)}");
+}
+
+var ordredOddNumbers = numbers.Where(number => number % 2 == 1).OrderBy(number => number);
