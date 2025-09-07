@@ -1,14 +1,24 @@
-﻿
-
-Console.ReadKey();
-
-void Main(string[] args)
+﻿class Program
 {
-  var numbers = new List<int> { 5, 3, 7, 1, 2, 4 };
-  var numbersWith10 = numbers.Append(10);
+  static void Main(string[] args)
+  {
+    var words = new List<string> { "a", "bb", "ccc", "dddd" };
 
-  System.Console.WriteLine($"Numbers: {string.Join(", ", numbers)}");
-  System.Console.WriteLine($"Numbers: {string.Join(", ", numbersWith10)}");
+    var shortWords = words.Where(word => word.Length < 3);
+
+    System.Console.WriteLine("First Iteration:");
+    foreach (var word in shortWords)
+    {
+      System.Console.WriteLine(word);
+    }
+    words.Add("e");
+
+    System.Console.WriteLine("Second Iteration:");
+    foreach (var word in shortWords)
+    {
+      System.Console.WriteLine(word);
+    }
+
+    Console.ReadKey();
+  }
 }
-
-var ordredOddNumbers = numbers.Where(number => number % 2 == 1).OrderBy(number => number);
