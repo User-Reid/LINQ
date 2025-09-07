@@ -2,7 +2,12 @@
 {
   static void Main(string[] args)
   {
+    var words = new[] { "lion", "tiger", "snow leopard" };
     var numbers = new[] { 5, 9, 2, 12, 6 };
+
+    var doesContainTiger = words.Contains();
+    System.Console.WriteLine(doesContainTiger);
+
     var isLargerThan0 = numbers.All(number => number > 4);
     System.Console.WriteLine(isLargerThan0);
 
