@@ -2,14 +2,15 @@
 {
   static void Main(string[] args)
   {
-    var pets = new[] {
-      new Pet(1, "Hannibal", PetType.Fish, 1.1f),
-      new Pet(1, "Hannibal", PetType.Fish, 1.1f),
-      new Pet(1, "Hannibal", PetType.Fish, 1.1f),
-      new Pet(1, "Hannibal", PetType.Fish, 1.1f),
-      new Pet(1, "Hannibal", PetType.Fish, 1.1f),
-      new Pet(1, "Hannibal", PetType.Fish, 1.1f),
-      new Pet(1, "Hannibal", PetType.Fish, 1.1f)
-    };
+    var numbers = new[] { 5, 9, 2, 12, 6 };
+    var isLargerThan0 = numbers.All(number => number > 4);
+    System.Console.WriteLine(isLargerThan0);
+
+    bool isAnyLargerThan10 = numbers.Any(number => number > 10);
+    System.Console.WriteLine(isAnyLargerThan10);
+
+     Console.ReadKey();
+
+    Console.ReadKey();
   }
 }
