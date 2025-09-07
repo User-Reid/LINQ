@@ -15,6 +15,11 @@ var pets = new[] {
 var orderByPetTypeThenName = pets.OrderBy(pet => pet.PetType).ThenBy(pet => pet.Name);
 Printer.Print(orderByPetTypeThenName, nameof(Pet.Name));
 
+IEnumerable<int> numbers = new[] { 16, 8, 9, -1, 2 };
+var firstNumber = numbers.First();
+var firstNumberCondition = numbers.First(number => number < 16 && number > 8);
+System.Console.WriteLine(firstNumber);
+System.Console.WriteLine(firstNumberCondition);
 Console.ReadKey();
 
 public enum PetType
