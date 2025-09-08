@@ -12,7 +12,8 @@ var pets = new[] {
   new Pet(8, "Nyan", PetType.Cat, 2.2f)
 };
 
-var numbers = new[] { 10, 1, 4, 17, 122 };
+var numbers = new[] { 10, 1, 4, 17, 122, 1, 4, 24, 88, 88 };
+System.Console.WriteLine(string.Join(", ", numbers.Distinct()));
 
 var criteria = pets.Where(pet => (pet.PetType == PetType.Dog || pet.PetType == PetType.Cat) && pet.Weight > 10 && pet.Id % 2 == 0);
 
